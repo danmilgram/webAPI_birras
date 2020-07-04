@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\d_milgram\\Desktop\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj": {}
+    "C:\\Users\\d_milgram\\Documents\\GitHub\\webAPI_birras\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj": {}
   },
   "projects": {
-    "C:\\Users\\d_milgram\\Desktop\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj": {
+    "C:\\Users\\d_milgram\\Documents\\GitHub\\webAPI_birras\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\d_milgram\\Desktop\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj",
+        "projectUniqueName": "C:\\Users\\d_milgram\\Documents\\GitHub\\webAPI_birras\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj",
         "projectName": "webAPI_birras",
-        "projectPath": "C:\\Users\\d_milgram\\Desktop\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj",
+        "projectPath": "C:\\Users\\d_milgram\\Documents\\GitHub\\webAPI_birras\\webAPI_birras\\webAPI_birras\\webAPI_birras.csproj",
         "packagesPath": "C:\\Users\\d_milgram\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\d_milgram\\Desktop\\webAPI_birras\\webAPI_birras\\obj\\",
+        "outputPath": "C:\\Users\\d_milgram\\Documents\\GitHub\\webAPI_birras\\webAPI_birras\\webAPI_birras\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -55,6 +55,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[3.1.5, )"
             },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",

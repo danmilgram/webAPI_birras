@@ -45,7 +45,7 @@ namespace webAPI_birras.Controllers
             }
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public ActionResult<List<Notification>> Get() =>
         _notService.Get();

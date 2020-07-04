@@ -1,0 +1,15 @@
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\appsettings.Development.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\appsettings.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.exe
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.deps.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.runtimeconfig.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.runtimeconfig.dev.json
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\b\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.dll
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\staticwebassets\webAPI_birras.StaticWebAssets.Manifest.cache
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\staticwebassets\webAPI_birras.StaticWebAssets.xml
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.AssemblyInfoInputs.cache
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.AssemblyInfo.cs
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.RazorTargetAssemblyInfo.cache
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.csproj.CopyComplete
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\.vs\webAPI_birras\v16\lut\0\i\webAPI_birras\Debug\netcoreapp3.0\webAPI_birras.dll

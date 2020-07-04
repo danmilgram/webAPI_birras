@@ -17,7 +17,7 @@ namespace webAPI_birras.Infrastructure
             //CONFIGURO  BIRRAS MONGO DATABASE
             services.Configure<BirrasDatabaseSettings>(
                 config.GetSection(nameof(BirrasDatabaseSettings)));
-
+            
             services.AddSingleton<IBirrasDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<BirrasDatabaseSettings>>().Value);
 
