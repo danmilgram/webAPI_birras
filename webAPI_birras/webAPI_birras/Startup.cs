@@ -21,6 +21,7 @@ namespace webAPI_birras
             ConfigureToken.ConfToken(Configuration, services);
             ConfigureSwagger.ConfSwagger(services);
             ConfigureMongo.ConfigMongo(Configuration, services);
+            ConfigureEmail.ConfigEMail(Configuration);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

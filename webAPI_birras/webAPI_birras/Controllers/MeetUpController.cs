@@ -131,7 +131,10 @@ namespace webAPI_birras.Controllers
                             checkedIn = false
                         };
 
-                        meet.guests.Add(invite);
+                        if (! meet.guests.Exists(meet => meet.mail == mail)){                            
+                            meet.guests.Add(invite);
+                        }
+                        EmailService.SendMail(mail, Invitation.Subject, Invitation.getText(meet));
                     }
                 else
                 {

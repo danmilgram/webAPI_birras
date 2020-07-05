@@ -592,3 +592,6 @@ C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bi
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\System.Text.Json.dll
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\obj\Debug\netcoreapp3.0\webAPI_birras.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\obj\Debug\netcoreapp3.0\webAPI_birras.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\MailKit.dll
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\MimeKit.dll
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\BouncyCastle.Crypto.dll

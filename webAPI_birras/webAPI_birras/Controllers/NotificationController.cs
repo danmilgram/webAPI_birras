@@ -76,7 +76,7 @@ namespace webAPI_birras.Controllers
                         readed = false
                     };
                     user.notifications.Add(un);
-                    _userService.Update(user.Id,user);
+                    _userService.Update(user.Id,user);                    
                     sended++;
                 }
             }
