@@ -13,7 +13,7 @@ namespace webAPI_birras_UnitTest.Tests
             MeetUpFunctions mtf = new MeetUpFunctions();
 
             //10 PERSONAS, <20 GRADOS, 0,75 BIRRAS C/U --> REDONDEA PARA ARRIBA, 2 CAJONES 
-            Assert.IsTrue(mtf.CalculateBeers(10, 18.2) == 12);
+            Assert.IsTrue(mtf.CalculateBeers(10, 18.2) == 2);
         }
 
         [TestMethod]
@@ -22,7 +22,7 @@ namespace webAPI_birras_UnitTest.Tests
             MeetUpFunctions mtf = new MeetUpFunctions();
 
             //1 PERSONAS, <20 GRADOS, 0,75 BIRRAS C/U --> REDONDEA PARA ARRIBA, 1 CAJON 
-            Assert.IsTrue(mtf.CalculateBeers(1, 5) == 6);
+            Assert.IsTrue(mtf.CalculateBeers(1, 5) == 1);
         }
 
         [TestMethod]
@@ -31,7 +31,7 @@ namespace webAPI_birras_UnitTest.Tests
             MeetUpFunctions mtf = new MeetUpFunctions();
 
             //50 PERSONAS, >20 GRADOS <24 GRADOS, 1 BIRRAS C/U --> REDONDEA PARA ARRIBA, 9 CAJONES 
-            Assert.IsTrue(mtf.CalculateBeers(50, 22) == 54);
+            Assert.IsTrue(mtf.CalculateBeers(50, 22) == 9);
         }
 
         [TestMethod]
@@ -40,7 +40,7 @@ namespace webAPI_birras_UnitTest.Tests
             MeetUpFunctions mtf = new MeetUpFunctions();
 
             //3 PERSONAS, 30 GRADOS, 3 BIRRAS C/U --> REDONDEA PARA ARRIBA, 2 CAJONES
-            Assert.IsTrue(mtf.CalculateBeers(3, 30) == 12);
+            Assert.IsTrue(mtf.CalculateBeers(3, 30) == 2);
         }
 
 

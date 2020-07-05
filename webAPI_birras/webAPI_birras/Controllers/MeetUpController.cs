@@ -43,7 +43,6 @@ namespace webAPI_birras.Controllers
             return Ok(MeetUp);
         }
 
-        [Authorize]
         [HttpGet("GetMeetUpWeather/{id:length(24)}")]
         public ActionResult GetMeetUpWeather(string id)
         {
@@ -56,9 +55,9 @@ namespace webAPI_birras.Controllers
             else
             {
                 MeetUpValidator meetUpValidator = new MeetUpValidator();
-                string msg = MeetUpValidator.MeetUpWeatherValidation(meet);
+                string msg = WeatherValidator.CanForecast(meet.date);
 
-                if (msg == MeetUpValidatorMessage.weatherOk)
+                if (msg == WeatherValidatorMessage.weatherOk)
                 {
                     int daydiff = ((TimeSpan)(meet.date - DateTime.Now)).Days;
                     JToken forecast = WeatherService.getDailyForecast(daydiff);
@@ -86,22 +85,27 @@ namespace webAPI_birras.Controllers
             {
                 MeetUpFunctions meetUpFunctions = new MeetUpFunctions();
 
-                string msg = MeetUpValidator.MeetUpWeatherValidation(meet);
-
-                if (msg == MeetUpValidatorMessage.weatherOk)
+                if (MeetUpValidatorMessage.OkGuests == MeetUpValidator.ValidateGuest(meet))
                 {
-                    int daydiff = Convert.ToInt32((meet.date - DateTime.Now.Date).TotalDays);
-                    JToken forecast = WeatherService.getDailyForecast(daydiff);
+                    if (WeatherValidatorMessage.weatherOk == WeatherValidator.CanForecast(meet.date))
+                    {
+                        int daydiff = Convert.ToInt32((meet.date - DateTime.Now.Date).TotalDays);
+                        JToken forecast = WeatherService.getDailyForecast(daydiff);
 
-                    string temp = forecast.SelectToken("day").ToString();
+                        string temp = forecast.SelectToken("day").ToString();
 
-                    int beers = meetUpFunctions.CalculateBeers(meet.guests.Count, Convert.ToDouble(temp));
+                        int beers = meetUpFunctions.CalculateBeers(meet.guests.Count, Convert.ToDouble(temp));
 
-                    return Ok(beers);
+                        return Ok(beers);
+                    }
+                    else
+                    {
+                        return ValidationProblem(WeatherValidatorMessage.emptyForecast, null, 442);
+                    }
                 }
                 else
                 {
-                    return ValidationProblem(msg, null, 442);
+                    return ValidationProblem(MeetUpValidatorMessage.noGuests, null, 442);
                 }
             }
         }
@@ -143,7 +147,7 @@ namespace webAPI_birras.Controllers
 
                 _MeetUpService.Update(id, meet);
             }
-            return NoContent();
+            return Ok(meet);
         }
 
 
@@ -151,6 +155,7 @@ namespace webAPI_birras.Controllers
         [HttpPut("/api/MeetUp/Join/{id:length(24)}")]
         public ActionResult Join(string id, [FromBody] reqMail req)
         {
+            bool accepted = false ;
             User user = _UserService.GetByMail(req.mail);
             MeetUp meet = _MeetUpService.Get(id);
 
@@ -170,23 +175,24 @@ namespace webAPI_birras.Controllers
                         {
                             inv.accepted = true;
                             _MeetUpService.Update(id, meet);
+                            accepted = true;
                         }
                     }
+
+                    return accepted ? Ok(meet) : ValidationProblem(MeetUpValidatorMessage.notInvited);
                 }                    
                 else
                 {
                     return ValidationProblem(MeetUpValidatorMessage.isFinalized,null,442);
                 }
             }
-
-            return NoContent();
         }
-
 
         [Authorize]
         [HttpPut("/api/MeetUp/CheckIn/{id:length(24)}")]
         public ActionResult CheckIn(string id, [FromBody] reqMail req)
         {
+            bool accepted = false;
             User user = _UserService.GetByMail(req.mail);
             MeetUp meet = _MeetUpService.Get(id);
 
@@ -207,15 +213,19 @@ namespace webAPI_birras.Controllers
                             inv.checkedIn = true;
                             inv.accepted = true;
                             _MeetUpService.Update(id, meet);
+                            accepted = true;
                         }
                     }
+
+                    return accepted ? Ok(meet) : ValidationProblem(MeetUpValidatorMessage.notInvited);
+
                 }
                 else
                 {
                     return ValidationProblem(MeetUpValidatorMessage.isNotFinalized, null, 442);
                 }
-                return NoContent();
             }
+
         }
 
 
@@ -259,7 +269,7 @@ namespace webAPI_birras.Controllers
 
             _MeetUpService.Update(id, MeetUpIn);
 
-            return NoContent();
+            return Ok(MeetUp);
         }
 
     }

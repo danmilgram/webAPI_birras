@@ -83,7 +83,7 @@ namespace webAPI_birras.Controllers
 
             _UserService.Update(id, UserIn);
 
-            return NoContent();
+            return Ok(User);
         }
 
  

@@ -22,7 +22,7 @@ namespace webAPI_birras.Controllers
         }
 
         [Authorize]
-        [HttpPut]
+        [HttpPut("/api/notification/read")]
         public ActionResult Read([FromBody] reqReadedNotification req)
         {
             var user = _userService.GetByMail(req.mail);
@@ -41,7 +41,7 @@ namespace webAPI_birras.Controllers
                         _userService.Update(user.Id, user);
                     }
                 }
-                return Ok();
+                return Ok(user.notifications);
             }
         }
 
@@ -51,7 +51,7 @@ namespace webAPI_birras.Controllers
         _notService.Get();
 
         [Authorize(Roles = "Admin")]
-        [HttpPost]
+        [HttpPost("/api/notification/send")]
         public ActionResult Send([FromBody] reqNotification req)
         {
             Notification not = new Notification

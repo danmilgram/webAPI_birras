@@ -22,7 +22,8 @@ namespace webAPI_birras.Controllers.Validators
             }
         }
 
-        public static string MeetUpWeatherValidation(MeetUp meet)
+
+        public static string ValidateGuest(MeetUp meet)
         {
             if (meet.guests.Count == 0)
             {
@@ -30,22 +31,9 @@ namespace webAPI_birras.Controllers.Validators
             }
             else
             {
-                int daydiff =  Convert.ToInt32((meet.date - DateTime.Now.Date).Days);
-                if (daydiff < 0)
-                {
-                    return MeetUpValidatorMessage.isFinalized;
-                }
-                else if (daydiff > WeatherService.MaxForecast)
-                {
-                    return MeetUpValidatorMessage.emptyForecast;
-                }
-                else
-                {
-                    return MeetUpValidatorMessage.weatherOk;
-                }
+                return MeetUpValidatorMessage.OkGuests;
             }
-            
-
+                        
         }
     }
 }

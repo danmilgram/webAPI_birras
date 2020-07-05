@@ -25,7 +25,7 @@ namespace webAPI_birras.Controllers.Functions
             }
 
             int cajones = Convert.ToInt32(Math.Ceiling(beers / 6));
-            return cajones * 6;             
+            return cajones;             
         }
     }
 }

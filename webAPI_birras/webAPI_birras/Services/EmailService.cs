@@ -38,7 +38,7 @@ namespace webAPI_birras.Services
         }
 
 
-        private static void Send(MimeMessage message)
+        private static int Send(MimeMessage message)
         {
             try
             {
@@ -50,11 +50,11 @@ namespace webAPI_birras.Services
                     emailClient.Send(message);
                     emailClient.Disconnect(true);
                 }
+                return 1;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-
-                throw e;
+                return 0;
             }
         }
     }
