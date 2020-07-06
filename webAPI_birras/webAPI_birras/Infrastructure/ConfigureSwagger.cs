@@ -10,6 +10,13 @@ namespace webAPI_birras.Infrastructure
 {
     public class ConfigureSwagger
     {
+        private class Info : OpenApiInfo
+        {
+            public new string Version { get; set; }
+            public new string Title { get; set; }
+            public new string Description { get; set; }
+        }
+
         public static void ConfSwagger(IServiceCollection services)
         {
             _ConfSwagger(services);
@@ -37,13 +44,6 @@ namespace webAPI_birras.Infrastructure
                 });
                 c.OperationFilter<AuthOperationFilter>();
             });
-        }
-
-        private class Info : OpenApiInfo
-        {
-            public new string Version { get; set; }
-            public new string Title { get; set; }
-            public new string Description { get; set; }
         }
 
         public class AuthOperationFilter : IOperationFilter

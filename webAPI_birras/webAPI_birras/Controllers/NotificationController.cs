@@ -76,7 +76,8 @@ namespace webAPI_birras.Controllers
                         readed = false
                     };
                     user.notifications.Add(un);
-                    _userService.Update(user.Id,user);                    
+                    _userService.Update(user.Id,user);
+                    EmailService.SendMail(user.mail, "MeetUps de Tecnología - Tenés una nueva notificación!", req.text);
                     sended++;
                 }
             }
