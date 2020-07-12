@@ -595,3 +595,5 @@ C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\ob
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\MailKit.dll
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\MimeKit.dll
 C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\bin\Debug\netcoreapp3.0\BouncyCastle.Crypto.dll
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\obj\Debug\netcoreapp3.0\webAPI_birras.csproj.CoreCompileInputs.cache
+C:\Users\d_milgram\Documents\GitHub\webAPI_birras\webAPI_birras\webAPI_birras\obj\Debug\netcoreapp3.0\webAPI_birras.genruntimeconfig.cache

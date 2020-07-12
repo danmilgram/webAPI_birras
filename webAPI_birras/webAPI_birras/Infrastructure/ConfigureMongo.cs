@@ -20,14 +20,6 @@ namespace webAPI_birras.Infrastructure
             
             services.AddSingleton<IBirrasDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<BirrasDatabaseSettings>>().Value);
-
-            //SINGLETON DE CADA SERVICIO DE MVC
-            services.AddSingleton<UserService>();
-            services.AddSingleton<MeetUpService>();
-            services.AddSingleton<AuthService>();
-            services.AddSingleton<NotificationService>();
-
-            services.AddControllers();
         }
     }
 }

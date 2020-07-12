@@ -17,7 +17,9 @@ namespace webAPI_birras
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
-        {           
+        {
+            IoC.addRegistration(services);
+
             ConfigureToken.ConfToken(Configuration, services);
             ConfigureSwagger.ConfSwagger(services);
             ConfigureMongo.ConfigMongo(Configuration, services);
